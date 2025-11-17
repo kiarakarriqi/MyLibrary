@@ -1,5 +1,5 @@
-/* ------------------------- */
-/* Sfond librarie */
+
+/* Library page sfond */
 body {
   font-family: 'Georgia', 'Times New Roman', serif;
   margin: 0;
@@ -20,7 +20,7 @@ body::before {
   z-index: -1;
 }
 
-/* ------------------------- */
+
 /* Header */
 header {
   background-color: rgba(85, 60, 40, 0.9);
@@ -49,7 +49,7 @@ nav a:hover {
   background-color: rgba(240,220,200,0.3);
 }
 
-/* ------------------------- */
+
 /* Main content */
 main {
   max-width: 1000px;
@@ -59,7 +59,7 @@ main {
   border-radius: 12px;
 }
 
-/* ------------------------- */
+
 /* Dashboard */
 .stats-grid {
   display: grid;
@@ -107,7 +107,7 @@ main {
   color: #fff;
 }
 
-/* ------------------------- */
+
 /* Formularët */
 form label {
   display:block;
@@ -179,7 +179,7 @@ tr:hover {
   background-color: rgba(210,180,150,0.6);
 }
 
-/* Ngjyra sipas statusit (të përmirësuara për temë librarie) */
+/* Colors about status */
 td.status-ToRead { 
   color: #a86524;  /* kafe e artë e ngrohtë */
   font-weight: 600;
@@ -201,7 +201,7 @@ td.status-Finished {
   text-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 
-/* Butonat Edit / Delete */
+/* Button Edit / Delete */
 button.edit-btn {
   background-color: #b48a65;  /* kafe e butë */
   color: #fff;
