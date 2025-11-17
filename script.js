@@ -1,4 +1,4 @@
-// Funksionet bazë
+// Base function 
 function getBooks() {
   const books = localStorage.getItem('books');
   return books ? JSON.parse(books) : [];
@@ -8,7 +8,7 @@ function saveBooks(books) {
   localStorage.setItem('books', JSON.stringify(books));
 }
 
-// Përditëso Dashboard
+// Dashboard updated 
 function updateDashboard() {
   const books = getBooks();
   const total = books.length;
@@ -24,7 +24,8 @@ function updateDashboard() {
   if(readEl) readEl.textContent = read;
   if(progressEl) progressEl.textContent = progress + '%';
   if(barEl) barEl.style.width = progress + '%';
-    // Përditësimi i Wishlist (librat me status "To Read")
+  
+    //Updated wishlist  (books with status "To Read")
   const wishlistEl = document.getElementById('wishlist-list');
   if (wishlistEl) {
     const books = getBooks();
@@ -43,7 +44,7 @@ function updateDashboard() {
   }
 }
 
-// Përditëso tabelën me librat – vetëm tek All Books
+// update book table  – vetëm tek All Books
 function updateBooksTable() {
   const tableBody = document.querySelector('#books-table tbody');
   if(!tableBody) return;
@@ -131,13 +132,13 @@ function editBook(i){
   updateDashboard();
 }
 
-// Filter tek All Books
+// Filter at All Books
 const filterSelect = document.getElementById('filter-status');
 if(filterSelect){
   filterSelect.addEventListener('change', updateBooksTable);
 }
 
-// Kur faqja ngarkohet
+// when the page is loaded 
 window.addEventListener('load', function(){
   updateDashboard();       // Dashboard shfaq vetëm statistikat
   updateBooksTable();      // All Books shfaq librat menjëherë
